@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple application running inside Docker" />
+    <title>Hello from Docker!</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        color: #17304d;
+        background: #f2f7fb;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        width: min(100%, 560px);
+        padding: 50px 35px;
+        border: 1px solid #dce9f3;
+        border-radius: 20px;
+        background: #ffffff;
+        box-shadow: 0 20px 55px rgba(30, 75, 110, 0.1);
+        text-align: center;
+      }
+
+      .docker-icon {
+        width: 78px;
+        height: 78px;
+        margin: 0 auto 24px;
+        display: grid;
+        place-items: center;
+        border-radius: 18px;
+        color: #ffffff;
+        background: #2496ed;
+        font-size: 38px;
+        box-shadow: 0 12px 26px rgba(36, 150, 237, 0.25);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        color: #17304d;
+        font-size: clamp(30px, 7vw, 44px);
+        letter-spacing: -1.5px;
+      }
+
+      p {
+        margin: 0;
+        color: #687b8e;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 28px;
+        padding: 9px 14px;
+        border-radius: 999px;
+        color: #237748;
+        background: #eaf8f0;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .status::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #32a866;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="docker-icon" aria-hidden="true">🐳</div>
+      <h1>Hello from Docker!</h1>
+      <p>This simple web application is running inside a Docker container.</p>
+      <span class="status">Container is running</span>
+    </main>
+  </body>
+</html>
